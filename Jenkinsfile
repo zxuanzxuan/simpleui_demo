@@ -8,8 +8,8 @@ pipeline {
   stages {
     stage('test') {
       agent {
-        node {
-          label 'python36'
+        docker {
+          image 'python36'
         }
 
       }

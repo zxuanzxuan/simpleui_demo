@@ -7,11 +7,9 @@ pipeline {
   }
   stages {
     stage('test') {
-      agent {
-        docker {
-          image 'python36'
-        }
-
+      agent any
+      environment {
+        container = 'python36'
       }
       steps {
         sh 'python -V'

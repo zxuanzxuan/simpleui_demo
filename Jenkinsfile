@@ -9,7 +9,7 @@ pipeline {
     stage('test') {
       agent {
         node {
-          label 'cd-jenkins-slave'
+          label 'python36'
         }
 
       }
